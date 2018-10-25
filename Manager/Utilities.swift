@@ -6,6 +6,7 @@
 //  Copyright © 2018 Nathan Grey. All rights reserved.
 //
 
+import Cocoa
 import Foundation
 import ServiceManagement
 
@@ -47,13 +48,21 @@ func update() {
 }
 
 public func launchAgent() {
-    try? FileManager.default.createDirectory(at: homeFolderURL.appendingPathComponent("Library/LaunchAgents"), withIntermediateDirectories: false, attributes: nil)
-    
-    do {
-        try FileManager.default.createSymbolicLink(at: homeFolderURL.appendingPathComponent("Library/LaunchAgents/com.gladius.io.node-manager.plist"), withDestinationURL: URL(fileURLWithPath: Bundle.main.resourcePath! + "/com.gladius.io.node-manager.plist"))
-    } catch {
-        print(error)
+    if (UserDefaults.standard.bool(forKey: "StartupRunAtLogin")) {
+        try? FileManager.default.createDirectory(at: homeFolderURL.appendingPathComponent("Library/LaunchAgents"), withIntermediateDirectories: false, attributes: nil)
+        
+        do {
+            try FileManager.default.createSymbolicLink(at: homeFolderURL.appendingPathComponent("Library/LaunchAgents/com.gladius.io.node-manager.plist"), withDestinationURL: URL(fileURLWithPath: Bundle.main.resourcePath! + "/com.gladius.io.node-manager.plist"))
+        } catch {
+            print(error)
+        }
+    } else {
+        try? FileManager.default.removeItem(at: homeFolderURL.appendingPathComponent("Library/LaunchAgents/com.gladius.io.node-manager.plist"))
     }
+}
+
+func launchTerminalApp() {
+    NSWorkspace.shared.launchApplication("Terminal", showIcon: false, autolaunch: false)
 }
 
 public func isInPath() -> Bool {
@@ -105,4 +114,15 @@ public func addToPath() {
             let _ = shell(command: "echo \"source ~/.config/gladius/paths\"  >> ~/\(rcFile)", output: false)
         }
     }
+}
+
+public func startGuardian() {
+    ProcessManager.shared.launchGuardian()
+    if (UserDefaults.standard.object(forKey: "StartupAutoLaunchUIAtLogin") == nil ||  UserDefaults.standard.bool(forKey: "StartupAutoLaunchUIAtLogin")) {
+        ProcessManager.shared.launchElectron()
+    }
+    
+    RequestManager.init().sendGuardianTimeoutRequest()
+    RequestManager.init().sendGuardianStartRequest()
+    
 }

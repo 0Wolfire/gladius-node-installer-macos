@@ -15,12 +15,16 @@
 		433CA37820AF5C5500CCAC3E /* gladius-controld in Resources */ = {isa = PBXBuildFile; fileRef = 433CA37520AF5C5500CCAC3E /* gladius-controld */; };
 		4345DB6320C82BB10028AB11 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4345DB6220C82BB10028AB11 /* Utilities.swift */; };
 		436F832E217147BF0028803E /* gladius-guardian.toml in Resources */ = {isa = PBXBuildFile; fileRef = 436F832D217147BF0028803E /* gladius-guardian.toml */; };
+		437FA017217FBEFE002B3A69 /* PrefenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437FA016217FBEFD002B3A69 /* PrefenceViewController.swift */; };
+		437FA0192180E118002B3A69 /* ProcessManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437FA0182180E118002B3A69 /* ProcessManager.swift */; };
+		437FA01B21810260002B3A69 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437FA01A21810260002B3A69 /* RequestManager.swift */; };
 		43A0F82C21711264006B69CA /* gladius-guardian in Resources */ = {isa = PBXBuildFile; fileRef = 43A0F82B21711264006B69CA /* gladius-guardian */; };
 		43C88B6420BF42B90022E90B /* Gladius.app in Resources */ = {isa = PBXBuildFile; fileRef = 43C88B6320BF402C0022E90B /* Gladius.app */; };
 		43C88B6620C0630C0022E90B /* MenuBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C88B6520C0630C0022E90B /* MenuBarController.swift */; };
 		43C88B6920C082360022E90B /* com.gladius.io.node-manager.plist in Resources */ = {isa = PBXBuildFile; fileRef = 43C88B6820C082360022E90B /* com.gladius.io.node-manager.plist */; };
 		43C9597620D83F28008D314B /* content in Resources */ = {isa = PBXBuildFile; fileRef = 43C9597520D83F28008D314B /* content */; };
 		43FA8DE520DC292E00040E7F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 43FA8DE420DC292E00040E7F /* README.md */; };
+		43FCA71121821F3C00A52E4C /* AdvancedPreferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FCA71021821F3C00A52E4C /* AdvancedPreferenceViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,12 +39,16 @@
 		433CA37520AF5C5500CCAC3E /* gladius-controld */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "gladius-controld"; sourceTree = "<group>"; };
 		4345DB6220C82BB10028AB11 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		436F832D217147BF0028803E /* gladius-guardian.toml */ = {isa = PBXFileReference; lastKnownFileType = text; path = "gladius-guardian.toml"; sourceTree = "<group>"; };
+		437FA016217FBEFD002B3A69 /* PrefenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefenceViewController.swift; sourceTree = "<group>"; };
+		437FA0182180E118002B3A69 /* ProcessManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessManager.swift; sourceTree = "<group>"; };
+		437FA01A21810260002B3A69 /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		43A0F82B21711264006B69CA /* gladius-guardian */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "gladius-guardian"; sourceTree = "<group>"; };
 		43C88B6320BF402C0022E90B /* Gladius.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = Gladius.app; sourceTree = "<group>"; };
 		43C88B6520C0630C0022E90B /* MenuBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarController.swift; sourceTree = "<group>"; };
 		43C88B6820C082360022E90B /* com.gladius.io.node-manager.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "com.gladius.io.node-manager.plist"; sourceTree = "<group>"; };
 		43C9597520D83F28008D314B /* content */ = {isa = PBXFileReference; lastKnownFileType = folder; path = content; sourceTree = "<group>"; };
 		43FA8DE420DC292E00040E7F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		43FCA71021821F3C00A52E4C /* AdvancedPreferenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedPreferenceViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,11 +81,12 @@
 		433CA36120AF5B8D00CCAC3E /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				433CA36220AF5B8D00CCAC3E /* AppDelegate.swift */,
 				43C88B6720C082220022E90B /* LaunchAgents */,
 				43C88B6220BF3D450022E90B /* Electron */,
 				433CA37220AF5C1C00CCAC3E /* Shared */,
-				433CA36220AF5B8D00CCAC3E /* AppDelegate.swift */,
-				43C88B6520C0630C0022E90B /* MenuBarController.swift */,
+				437FA01C218109F2002B3A69 /* ViewControllers */,
+				437FA01D21810A12002B3A69 /* Managers */,
 				4345DB6220C82BB10028AB11 /* Utilities.swift */,
 				433CA36820AF5B8E00CCAC3E /* Main.storyboard */,
 				4326466820BEF168009A7FCD /* Assets.xcassets */,
@@ -99,6 +108,25 @@
 				436F832D217147BF0028803E /* gladius-guardian.toml */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		437FA01C218109F2002B3A69 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				43C88B6520C0630C0022E90B /* MenuBarController.swift */,
+				437FA016217FBEFD002B3A69 /* PrefenceViewController.swift */,
+				43FCA71021821F3C00A52E4C /* AdvancedPreferenceViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		437FA01D21810A12002B3A69 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				437FA01A21810260002B3A69 /* RequestManager.swift */,
+				437FA0182180E118002B3A69 /* ProcessManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		43C88B6220BF3D450022E90B /* Electron */ = {
@@ -197,8 +225,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43FCA71121821F3C00A52E4C /* AdvancedPreferenceViewController.swift in Sources */,
 				4345DB6320C82BB10028AB11 /* Utilities.swift in Sources */,
 				43C88B6620C0630C0022E90B /* MenuBarController.swift in Sources */,
+				437FA017217FBEFE002B3A69 /* PrefenceViewController.swift in Sources */,
+				437FA01B21810260002B3A69 /* RequestManager.swift in Sources */,
+				437FA0192180E118002B3A69 /* ProcessManager.swift in Sources */,
 				433CA36320AF5B8D00CCAC3E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,25 +10,29 @@ import Cocoa
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-    var guardianProcess: Process?
-
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         config()
-        
         content()
-        
-        let guardian = shell(command: Bundle.main.resourcePath! + "/gladius-guardian", output: false)
-        guardianProcess = guardian.process
-        
         launchAgent()
+        startGuardian()
+    }
+    
+    func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
+        if (UserDefaults.standard.object(forKey: "AutoLaunchUI") == nil || UserDefaults.standard.bool(forKey: "AutoLaunchUI")) {
+            ProcessManager.shared.launchElectron()
+        }
+        
+        return true
+    }
+    
+    func applicationShouldTerminate(_ sender: NSApplication) -> NSApplication.TerminateReply {
+        ProcessManager.shared.killAll()
+        
+        return NSApplication.TerminateReply.terminateNow
     }
     
     func applicationWillTerminate(_ aNotification: Notification) {
-        quitAll()
-    }
-    
-    func quitAll() {
-        guardianProcess?.terminate()
+        ProcessManager.shared.killAll()
     }
 }
 

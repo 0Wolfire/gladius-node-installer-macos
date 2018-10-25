@@ -9,7 +9,7 @@
 	<key>ProgramArguments</key>
 	<array>
 		<string>/Applications/Gladius.app/Contents/MacOS/Gladius</string>
-    <string>autoLaunch</string>
+		<string>autoLaunch</string>
 	</array>
 </dict>
 </plist>

@@ -25,6 +25,7 @@
 		43C9597620D83F28008D314B /* content in Resources */ = {isa = PBXBuildFile; fileRef = 43C9597520D83F28008D314B /* content */; };
 		43FA8DE520DC292E00040E7F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 43FA8DE420DC292E00040E7F /* README.md */; };
 		43FCA71121821F3C00A52E4C /* AdvancedPreferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FCA71021821F3C00A52E4C /* AdvancedPreferenceViewController.swift */; };
+		43FCA714218269EE00A52E4C /* WalletPreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FCA712218269EE00A52E4C /* WalletPreferencesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		43C9597520D83F28008D314B /* content */ = {isa = PBXFileReference; lastKnownFileType = folder; path = content; sourceTree = "<group>"; };
 		43FA8DE420DC292E00040E7F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		43FCA71021821F3C00A52E4C /* AdvancedPreferenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedPreferenceViewController.swift; sourceTree = "<group>"; };
+		43FCA712218269EE00A52E4C /* WalletPreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletPreferencesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				43C88B6520C0630C0022E90B /* MenuBarController.swift */,
 				437FA016217FBEFD002B3A69 /* PrefenceViewController.swift */,
 				43FCA71021821F3C00A52E4C /* AdvancedPreferenceViewController.swift */,
+				43FCA712218269EE00A52E4C /* WalletPreferencesViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -178,6 +181,14 @@
 					433CA35E20AF5B8D00CCAC3E = {
 						CreatedOnToolsVersion = 9.3.1;
 						LastSwiftMigration = 1000;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.Mac = {
+								enabled = 0;
+							};
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -227,6 +238,7 @@
 			files = (
 				43FCA71121821F3C00A52E4C /* AdvancedPreferenceViewController.swift in Sources */,
 				4345DB6320C82BB10028AB11 /* Utilities.swift in Sources */,
+				43FCA714218269EE00A52E4C /* WalletPreferencesViewController.swift in Sources */,
 				43C88B6620C0630C0022E90B /* MenuBarController.swift in Sources */,
 				437FA017217FBEFE002B3A69 /* PrefenceViewController.swift in Sources */,
 				437FA01B21810260002B3A69 /* RequestManager.swift in Sources */,

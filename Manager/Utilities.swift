@@ -116,6 +116,59 @@ public func addToPath() {
     }
 }
 
+func savePassphraseToKeychain(passphrase: String) {
+    let password = passphrase.data(using: String.Encoding.utf8)!
+    let addQuery: [String: Any] = [
+        kSecClass as String: kSecClassGenericPassword,
+        kSecAttrLabel as String: "Gladius Wallet",
+        kSecAttrGeneric as String: "gladius.io",
+        kSecAttrService as String: "gladius.io",
+        kSecAttrAccessible as String: kSecAttrAccessibleWhenUnlockedThisDeviceOnly,
+        kSecAttrIsInvisible as String: kCFBooleanTrue,
+        kSecAttrSynchronizable as String: kCFBooleanFalse,
+        kSecValueData as String: password
+    ]
+    
+    let updateQuery: [String: Any] = [
+        kSecValueData as String: password
+    ]
+    
+    if retrieveWalletPassphrase() != nil {
+        let status = SecItemUpdate(addQuery as CFDictionary, updateQuery as CFDictionary)
+        print(status)
+    } else {
+        let status = SecItemAdd(addQuery as CFDictionary, nil)
+        print(status)
+    }
+}
+
+func retrieveWalletPassphrase() -> String? {
+    let query: [String: Any] = [
+        kSecClass as String: kSecClassGenericPassword,
+        kSecAttrLabel as String: "Gladius Wallet",
+        kSecMatchLimit as String: kSecMatchLimitOne,
+        kSecReturnAttributes as String: true,
+        kSecReturnData as String: true
+    ]
+    
+    var item: CFTypeRef?
+    let status = SecItemCopyMatching(query as CFDictionary, &item)
+    //        guard status != errSecItemNotFound else { return  }
+    //        guard status == errSecSuccess else { return }
+    
+    print(status)
+    
+    guard let existingItem = item as? [String : Any],
+        let passwordData = existingItem[kSecValueData as String] as? Data,
+        let searchpassword = String(data: passwordData, encoding: String.Encoding.utf8)
+        else {
+            return nil
+            
+    }
+    
+    return searchpassword
+}
+
 public func startGuardian() {
     ProcessManager.shared.launchGuardian()
     if (UserDefaults.standard.object(forKey: "StartupAutoLaunchUIAtLogin") == nil ||  UserDefaults.standard.bool(forKey: "StartupAutoLaunchUIAtLogin")) {
@@ -123,6 +176,4 @@ public func startGuardian() {
     }
     
     RequestManager.init().sendGuardianTimeoutRequest()
-    RequestManager.init().sendGuardianStartRequest()
-    
 }

@@ -142,11 +142,11 @@
             <objects>
                 <viewController title="Preferences" showSeguePresentationStyle="single" id="pQP-wk-ya7" customClass="PrefenceViewController" customModule="Gladius" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="XWq-ba-HY8">
-                        <rect key="frame" x="0.0" y="0.0" width="400" height="359"/>
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="647"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <stackView distribution="equalSpacing" orientation="vertical" alignment="leading" spacing="20" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bas-eh-AQ1">
-                                <rect key="frame" x="20" y="37" width="360" height="302"/>
+                                <rect key="frame" x="20" y="325" width="360" height="302"/>
                                 <subviews>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5kR-lT-aN8">
                                         <rect key="frame" x="-2" y="283" width="364" height="19"/>
@@ -305,14 +305,15 @@
                 </viewController>
                 <customObject id="qTO-2J-5Ta" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="308" y="740.5"/>
+            <point key="canvasLocation" x="308" y="827"/>
         </scene>
         <!--Preferences-->
         <scene sceneID="ouh-pF-50o">
             <objects>
-                <tabViewController title="Preferences" showSeguePresentationStyle="single" selectedTabViewItemIndex="0" id="wfP-uJ-tz8" sceneMemberID="viewController">
+                <tabViewController title="Preferences" showSeguePresentationStyle="single" selectedTabViewItemIndex="0" tabStyle="toolbar" id="wfP-uJ-tz8" sceneMemberID="viewController">
                     <tabViewItems>
-                        <tabViewItem label="General" id="Cgg-Z2-2xM"/>
+                        <tabViewItem label="General" image="MenuBar" id="Cgg-Z2-2xM"/>
+                        <tabViewItem id="8jz-xR-PJo"/>
                         <tabViewItem label="Advanced" id="Irg-4Z-4lm"/>
                     </tabViewItems>
                     <tabView key="tabView" type="noTabsNoBorder" id="i7z-hX-jVK">
@@ -334,12 +335,138 @@
                     <connections>
                         <outlet property="tabView" destination="i7z-hX-jVK" id="AKH-Qe-tS7"/>
                         <segue destination="pQP-wk-ya7" kind="relationship" relationship="tabItems" id="ctu-rY-ULz"/>
+                        <segue destination="LGo-Jt-BgR" kind="relationship" relationship="tabItems" id="05L-gL-pdV"/>
                         <segue destination="xQm-yd-j1V" kind="relationship" relationship="tabItems" id="Iap-f3-7SK"/>
                     </connections>
                 </tabViewController>
                 <customObject id="se4-CX-1oW" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="308" y="77"/>
+        </scene>
+        <!--Wallet-->
+        <scene sceneID="N4R-GD-Pw3">
+            <objects>
+                <viewController title="Wallet" id="LGo-Jt-BgR" customClass="WalletPreferencesViewController" customModule="Gladius" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="R7t-lv-nzA">
+                        <rect key="frame" x="0.0" y="0.0" width="512" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <stackView distribution="equalSpacing" orientation="vertical" alignment="leading" spacing="20" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kbo-zK-ZbJ">
+                                <rect key="frame" x="20" y="173" width="472" height="107"/>
+                                <subviews>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ovC-hl-Xv1">
+                                        <rect key="frame" x="-2" y="88" width="476" height="19"/>
+                                        <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Wallet Management" id="joq-JT-gpD">
+                                            <font key="font" metaFont="system" size="15"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="SvZ-eR-OmL">
+                                        <rect key="frame" x="0.0" y="65" width="472" height="5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="9Wh-JJ-EUK"/>
+                                            <constraint firstAttribute="height" constant="1" id="yAZ-XR-PRL"/>
+                                        </constraints>
+                                    </box>
+                                    <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N2c-U5-0gx">
+                                        <rect key="frame" x="0.0" y="0.0" width="472" height="47"/>
+                                        <subviews>
+                                            <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R7v-RQ-gIL">
+                                                <rect key="frame" x="0.0" y="25" width="472" height="22"/>
+                                                <subviews>
+                                                    <secureTextField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kH9-zE-wKB">
+                                                        <rect key="frame" x="0.0" y="0.0" width="406" height="22"/>
+                                                        <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Wallet Passphrase" drawsBackground="YES" usesSingleLineMode="YES" id="P2X-LG-mm8">
+                                                            <font key="font" metaFont="system"/>
+                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                            <allowedInputSourceLocales>
+                                                                <string>NSAllRomanInputSourcesLocaleIdentifier</string>
+                                                            </allowedInputSourceLocales>
+                                                        </secureTextFieldCell>
+                                                    </secureTextField>
+                                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="A90-qZ-xqI">
+                                                        <rect key="frame" x="408" y="-6" width="70" height="32"/>
+                                                        <buttonCell key="cell" type="push" title="Save" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="WSu-RA-XJe">
+                                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                        <connections>
+                                                            <action selector="saveButtonPressed:" target="LGo-Jt-BgR" id="ShO-HL-3VE"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <visibilityPriorities>
+                                                    <integer value="1000"/>
+                                                    <integer value="1000"/>
+                                                </visibilityPriorities>
+                                                <customSpacing>
+                                                    <real value="3.4028234663852886e+38"/>
+                                                    <real value="3.4028234663852886e+38"/>
+                                                </customSpacing>
+                                            </stackView>
+                                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="FKA-1E-YJu">
+                                                <rect key="frame" x="-2" y="0.0" width="476" height="17"/>
+                                                <textFieldCell key="cell" selectable="YES" title="Saves wallet passphrase to the macOS Keychain" id="iuA-oH-vZw">
+                                                    <font key="font" metaFont="system"/>
+                                                    <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                </textFieldCell>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="R7v-RQ-gIL" firstAttribute="leading" secondItem="N2c-U5-0gx" secondAttribute="leading" id="4Bb-7T-GSw"/>
+                                            <constraint firstAttribute="trailing" secondItem="R7v-RQ-gIL" secondAttribute="trailing" id="Dbe-nP-Gxm"/>
+                                            <constraint firstItem="FKA-1E-YJu" firstAttribute="leading" secondItem="N2c-U5-0gx" secondAttribute="leading" id="HBB-Q6-osd"/>
+                                            <constraint firstAttribute="trailing" secondItem="FKA-1E-YJu" secondAttribute="trailing" id="SX0-li-gNG"/>
+                                            <constraint firstItem="R7v-RQ-gIL" firstAttribute="top" secondItem="N2c-U5-0gx" secondAttribute="top" id="VcY-cC-Gez"/>
+                                        </constraints>
+                                        <visibilityPriorities>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                        </visibilityPriorities>
+                                        <customSpacing>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                        </customSpacing>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ovC-hl-Xv1" firstAttribute="leading" secondItem="Kbo-zK-ZbJ" secondAttribute="leading" id="2v9-ST-SOT"/>
+                                    <constraint firstAttribute="trailing" secondItem="N2c-U5-0gx" secondAttribute="trailing" id="Byv-sv-97g"/>
+                                    <constraint firstItem="N2c-U5-0gx" firstAttribute="leading" secondItem="Kbo-zK-ZbJ" secondAttribute="leading" id="H2G-bP-5H4"/>
+                                    <constraint firstItem="ovC-hl-Xv1" firstAttribute="top" secondItem="Kbo-zK-ZbJ" secondAttribute="top" id="Zl6-Tu-bEF"/>
+                                    <constraint firstAttribute="trailing" secondItem="ovC-hl-Xv1" secondAttribute="trailing" id="b7b-5b-MzH"/>
+                                    <constraint firstItem="SvZ-eR-OmL" firstAttribute="leading" secondItem="Kbo-zK-ZbJ" secondAttribute="leading" id="jmY-qP-HGL"/>
+                                    <constraint firstAttribute="trailing" secondItem="SvZ-eR-OmL" secondAttribute="trailing" id="qyV-Cd-Eq5"/>
+                                </constraints>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Kbo-zK-ZbJ" firstAttribute="top" secondItem="R7t-lv-nzA" secondAttribute="top" constant="20" id="qXZ-Kv-UtK"/>
+                            <constraint firstItem="Kbo-zK-ZbJ" firstAttribute="leading" secondItem="R7t-lv-nzA" secondAttribute="leading" constant="20" id="tE8-z8-TNQ"/>
+                            <constraint firstAttribute="trailing" secondItem="Kbo-zK-ZbJ" secondAttribute="trailing" constant="20" id="uyR-Cg-ksB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="saveButton" destination="A90-qZ-xqI" id="XzL-oQ-Y1r"/>
+                        <outlet property="secureWalletTextField" destination="kH9-zE-wKB" id="tmi-aY-0nk"/>
+                    </connections>
+                </viewController>
+                <customObject id="d1P-MW-tbH" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="870" y="77"/>
         </scene>
         <!--Advanced Preference View Controller-->
         <scene sceneID="M38-jh-o09">
@@ -475,6 +602,9 @@
             <point key="canvasLocation" x="833" y="653"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="MenuBar" width="1175" height="1039"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="bZy-wy-uq6"/>
     </inferredMetricsTieBreakers>

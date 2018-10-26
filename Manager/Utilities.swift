@@ -169,9 +169,24 @@ func retrieveWalletPassphrase() -> String? {
     return searchpassword
 }
 
+func deleteWalletPassphrase() {
+    let query: [String: Any] = [
+        kSecClass as String: kSecClassGenericPassword,
+        kSecAttrLabel as String: "Gladius Wallet",
+        kSecMatchLimit as String: kSecMatchLimitOne,
+        kSecReturnAttributes as String: true,
+        kSecReturnData as String: true
+    ]
+    
+    SecItemDelete(query as CFDictionary)
+}
+
 public func startGuardian() {
     ProcessManager.shared.launchGuardian()
-    if (UserDefaults.standard.object(forKey: "StartupAutoLaunchUIAtLogin") == nil ||  UserDefaults.standard.bool(forKey: "StartupAutoLaunchUIAtLogin")) {
+    
+    if ((UserDefaults.standard.object(forKey: "StartupRunAtLogin") == nil ||  UserDefaults.standard.bool(forKey: "StartupRunAtLogin")) &&
+        (UserDefaults.standard.object(forKey: "StartupAutoLaunchUIAtLogin") == nil ||  UserDefaults.standard.bool(forKey: "StartupAutoLaunchUIAtLogin")))
+    {
         ProcessManager.shared.launchElectron()
     }
     

@@ -72,7 +72,9 @@ class RequestManager {
                 // Success
                 let statusCode = (response as! HTTPURLResponse).statusCode
                 print("URL Session Task Succeeded: HTTP \(statusCode)")
-                self.sendOpenWalletRequest()
+                if (UserDefaults.standard.bool(forKey: "UseKeychain")) {
+                    self.sendOpenWalletRequest()
+                }
             }
             else {
                 // Failure

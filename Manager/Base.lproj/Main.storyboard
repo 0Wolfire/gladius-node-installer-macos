@@ -348,14 +348,14 @@
             <objects>
                 <viewController title="Wallet" id="LGo-Jt-BgR" customClass="WalletPreferencesViewController" customModule="Gladius" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="R7t-lv-nzA">
-                        <rect key="frame" x="0.0" y="0.0" width="512" height="300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="640" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <stackView distribution="equalSpacing" orientation="vertical" alignment="leading" spacing="20" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kbo-zK-ZbJ">
-                                <rect key="frame" x="20" y="173" width="472" height="107"/>
+                                <rect key="frame" x="20" y="174" width="600" height="106"/>
                                 <subviews>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ovC-hl-Xv1">
-                                        <rect key="frame" x="-2" y="88" width="476" height="19"/>
+                                        <rect key="frame" x="-2" y="87" width="604" height="19"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Wallet Management" id="joq-JT-gpD">
                                             <font key="font" metaFont="system" size="15"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -363,20 +363,30 @@
                                         </textFieldCell>
                                     </textField>
                                     <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="SvZ-eR-OmL">
-                                        <rect key="frame" x="0.0" y="65" width="472" height="5"/>
+                                        <rect key="frame" x="0.0" y="64" width="600" height="5"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="9Wh-JJ-EUK"/>
                                             <constraint firstAttribute="height" constant="1" id="yAZ-XR-PRL"/>
                                         </constraints>
                                     </box>
                                     <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N2c-U5-0gx">
-                                        <rect key="frame" x="0.0" y="0.0" width="472" height="47"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="46"/>
                                         <subviews>
                                             <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R7v-RQ-gIL">
-                                                <rect key="frame" x="0.0" y="25" width="472" height="22"/>
+                                                <rect key="frame" x="0.0" y="25" width="600" height="21"/>
                                                 <subviews>
+                                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="m59-SA-umM">
+                                                        <rect key="frame" x="-2" y="-2" width="124" height="25"/>
+                                                        <buttonCell key="cell" type="check" title="Save in Keychain" bezelStyle="regularSquare" imagePosition="left" inset="2" id="FVy-pu-WlE">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                        <connections>
+                                                            <action selector="saveInKeychainCheckboxPressed:" target="LGo-Jt-BgR" id="QA5-I2-wBL"/>
+                                                        </connections>
+                                                    </button>
                                                     <secureTextField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kH9-zE-wKB">
-                                                        <rect key="frame" x="0.0" y="0.0" width="406" height="22"/>
+                                                        <rect key="frame" x="128" y="0.0" width="406" height="21"/>
                                                         <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Wallet Passphrase" drawsBackground="YES" usesSingleLineMode="YES" id="P2X-LG-mm8">
                                                             <font key="font" metaFont="system"/>
                                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -387,7 +397,7 @@
                                                         </secureTextFieldCell>
                                                     </secureTextField>
                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="A90-qZ-xqI">
-                                                        <rect key="frame" x="408" y="-6" width="70" height="32"/>
+                                                        <rect key="frame" x="536" y="-7" width="70" height="32"/>
                                                         <buttonCell key="cell" type="push" title="Save" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="WSu-RA-XJe">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                             <font key="font" metaFont="system"/>
@@ -397,17 +407,23 @@
                                                         </connections>
                                                     </button>
                                                 </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="m59-SA-umM" secondAttribute="bottom" id="C5R-Xb-U3s"/>
+                                                    <constraint firstItem="m59-SA-umM" firstAttribute="top" secondItem="R7v-RQ-gIL" secondAttribute="top" id="tRo-sd-SPW"/>
+                                                </constraints>
                                                 <visibilityPriorities>
+                                                    <integer value="1000"/>
                                                     <integer value="1000"/>
                                                     <integer value="1000"/>
                                                 </visibilityPriorities>
                                                 <customSpacing>
                                                     <real value="3.4028234663852886e+38"/>
                                                     <real value="3.4028234663852886e+38"/>
+                                                    <real value="3.4028234663852886e+38"/>
                                                 </customSpacing>
                                             </stackView>
                                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="FKA-1E-YJu">
-                                                <rect key="frame" x="-2" y="0.0" width="476" height="17"/>
+                                                <rect key="frame" x="-2" y="0.0" width="604" height="17"/>
                                                 <textFieldCell key="cell" selectable="YES" title="Saves wallet passphrase to the macOS Keychain" id="iuA-oH-vZw">
                                                     <font key="font" metaFont="system"/>
                                                     <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
@@ -461,6 +477,7 @@
                     </view>
                     <connections>
                         <outlet property="saveButton" destination="A90-qZ-xqI" id="XzL-oQ-Y1r"/>
+                        <outlet property="saveInKeychainCheckbox" destination="m59-SA-umM" id="xcJ-Fi-Mjg"/>
                         <outlet property="secureWalletTextField" destination="kH9-zE-wKB" id="tmi-aY-0nk"/>
                     </connections>
                 </viewController>

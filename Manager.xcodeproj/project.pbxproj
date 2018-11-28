@@ -10,9 +10,7 @@
 		4326466920BEF168009A7FCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4326466820BEF168009A7FCD /* Assets.xcassets */; };
 		433CA36320AF5B8D00CCAC3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433CA36220AF5B8D00CCAC3E /* AppDelegate.swift */; };
 		433CA36A20AF5B8E00CCAC3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 433CA36820AF5B8E00CCAC3E /* Main.storyboard */; };
-		433CA37620AF5C5500CCAC3E /* gladius-networkd in Resources */ = {isa = PBXBuildFile; fileRef = 433CA37320AF5C5500CCAC3E /* gladius-networkd */; };
 		433CA37720AF5C5500CCAC3E /* gladius in Resources */ = {isa = PBXBuildFile; fileRef = 433CA37420AF5C5500CCAC3E /* gladius */; };
-		433CA37820AF5C5500CCAC3E /* gladius-controld in Resources */ = {isa = PBXBuildFile; fileRef = 433CA37520AF5C5500CCAC3E /* gladius-controld */; };
 		4345DB6320C82BB10028AB11 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4345DB6220C82BB10028AB11 /* Utilities.swift */; };
 		436F832E217147BF0028803E /* gladius-guardian.toml in Resources */ = {isa = PBXBuildFile; fileRef = 436F832D217147BF0028803E /* gladius-guardian.toml */; };
 		437FA017217FBEFE002B3A69 /* PrefenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437FA016217FBEFD002B3A69 /* PrefenceViewController.swift */; };
@@ -22,7 +20,8 @@
 		43C88B6420BF42B90022E90B /* Gladius.app in Resources */ = {isa = PBXBuildFile; fileRef = 43C88B6320BF402C0022E90B /* Gladius.app */; };
 		43C88B6620C0630C0022E90B /* MenuBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C88B6520C0630C0022E90B /* MenuBarController.swift */; };
 		43C88B6920C082360022E90B /* com.gladius.io.node-manager.plist in Resources */ = {isa = PBXBuildFile; fileRef = 43C88B6820C082360022E90B /* com.gladius.io.node-manager.plist */; };
-		43C9597620D83F28008D314B /* content in Resources */ = {isa = PBXBuildFile; fileRef = 43C9597520D83F28008D314B /* content */; };
+		43E182FB21ADBD0400AF1D4B /* gladius-edged in Resources */ = {isa = PBXBuildFile; fileRef = 43E182FA21ADBD0400AF1D4B /* gladius-edged */; };
+		43E182FD21ADBD0C00AF1D4B /* gladius-network-gateway in Resources */ = {isa = PBXBuildFile; fileRef = 43E182FC21ADBD0C00AF1D4B /* gladius-network-gateway */; };
 		43FA8DE520DC292E00040E7F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 43FA8DE420DC292E00040E7F /* README.md */; };
 		43FCA71121821F3C00A52E4C /* AdvancedPreferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FCA71021821F3C00A52E4C /* AdvancedPreferenceViewController.swift */; };
 		43FCA714218269EE00A52E4C /* WalletPreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FCA712218269EE00A52E4C /* WalletPreferencesViewController.swift */; };
@@ -35,9 +34,7 @@
 		433CA36920AF5B8E00CCAC3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		433CA36B20AF5B8E00CCAC3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		433CA36C20AF5B8E00CCAC3E /* Manager.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Manager.entitlements; sourceTree = "<group>"; };
-		433CA37320AF5C5500CCAC3E /* gladius-networkd */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "gladius-networkd"; sourceTree = "<group>"; };
 		433CA37420AF5C5500CCAC3E /* gladius */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = gladius; sourceTree = "<group>"; };
-		433CA37520AF5C5500CCAC3E /* gladius-controld */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "gladius-controld"; sourceTree = "<group>"; };
 		4345DB6220C82BB10028AB11 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		436F832D217147BF0028803E /* gladius-guardian.toml */ = {isa = PBXFileReference; lastKnownFileType = text; path = "gladius-guardian.toml"; sourceTree = "<group>"; };
 		437FA016217FBEFD002B3A69 /* PrefenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefenceViewController.swift; sourceTree = "<group>"; };
@@ -47,7 +44,8 @@
 		43C88B6320BF402C0022E90B /* Gladius.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = Gladius.app; sourceTree = "<group>"; };
 		43C88B6520C0630C0022E90B /* MenuBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarController.swift; sourceTree = "<group>"; };
 		43C88B6820C082360022E90B /* com.gladius.io.node-manager.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "com.gladius.io.node-manager.plist"; sourceTree = "<group>"; };
-		43C9597520D83F28008D314B /* content */ = {isa = PBXFileReference; lastKnownFileType = folder; path = content; sourceTree = "<group>"; };
+		43E182FA21ADBD0400AF1D4B /* gladius-edged */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "gladius-edged"; sourceTree = "<group>"; };
+		43E182FC21ADBD0C00AF1D4B /* gladius-network-gateway */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "gladius-network-gateway"; sourceTree = "<group>"; };
 		43FA8DE420DC292E00040E7F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		43FCA71021821F3C00A52E4C /* AdvancedPreferenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedPreferenceViewController.swift; sourceTree = "<group>"; };
 		43FCA712218269EE00A52E4C /* WalletPreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletPreferencesViewController.swift; sourceTree = "<group>"; };
@@ -102,11 +100,10 @@
 			isa = PBXGroup;
 			children = (
 				43FA8DE420DC292E00040E7F /* README.md */,
-				43C9597520D83F28008D314B /* content */,
 				433CA37420AF5C5500CCAC3E /* gladius */,
 				43A0F82B21711264006B69CA /* gladius-guardian */,
-				433CA37520AF5C5500CCAC3E /* gladius-controld */,
-				433CA37320AF5C5500CCAC3E /* gladius-networkd */,
+				43E182FA21ADBD0400AF1D4B /* gladius-edged */,
+				43E182FC21ADBD0C00AF1D4B /* gladius-network-gateway */,
 				436F832D217147BF0028803E /* gladius-guardian.toml */,
 			);
 			path = Shared;
@@ -218,13 +215,12 @@
 				4326466920BEF168009A7FCD /* Assets.xcassets in Resources */,
 				43A0F82C21711264006B69CA /* gladius-guardian in Resources */,
 				43C88B6920C082360022E90B /* com.gladius.io.node-manager.plist in Resources */,
-				43C9597620D83F28008D314B /* content in Resources */,
 				43C88B6420BF42B90022E90B /* Gladius.app in Resources */,
 				433CA37720AF5C5500CCAC3E /* gladius in Resources */,
 				433CA36A20AF5B8E00CCAC3E /* Main.storyboard in Resources */,
+				43E182FD21ADBD0C00AF1D4B /* gladius-network-gateway in Resources */,
+				43E182FB21ADBD0400AF1D4B /* gladius-edged in Resources */,
 				43FA8DE520DC292E00040E7F /* README.md in Resources */,
-				433CA37820AF5C5500CCAC3E /* gladius-controld in Resources */,
-				433CA37620AF5C5500CCAC3E /* gladius-networkd in Resources */,
 				436F832E217147BF0028803E /* gladius-guardian.toml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -382,14 +378,14 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 4A6Y3LCD29;
+				DEVELOPMENT_TEAM = DTCD87H2BC;
 				INFOPLIST_FILE = Manager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.gladius.io.temp.node-manager";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gladius.io.beta.node-manager";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
@@ -404,14 +400,14 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 4A6Y3LCD29;
+				DEVELOPMENT_TEAM = DTCD87H2BC;
 				INFOPLIST_FILE = Manager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.gladius.io.temp.node-manager";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gladius.io.beta.node-manager";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;

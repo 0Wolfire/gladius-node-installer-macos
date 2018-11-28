@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14313.18"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -310,12 +310,13 @@
         <!--Preferences-->
         <scene sceneID="ouh-pF-50o">
             <objects>
-                <tabViewController title="Preferences" showSeguePresentationStyle="single" selectedTabViewItemIndex="0" tabStyle="toolbar" id="wfP-uJ-tz8" sceneMemberID="viewController">
+                <tabViewController title="Preferences" showSeguePresentationStyle="single" selectedTabViewItemIndex="0" id="wfP-uJ-tz8" sceneMemberID="viewController">
                     <tabViewItems>
-                        <tabViewItem label="General" image="MenuBar" id="Cgg-Z2-2xM"/>
+                        <tabViewItem label="General" id="Cgg-Z2-2xM"/>
                         <tabViewItem id="8jz-xR-PJo"/>
                         <tabViewItem label="Advanced" id="Irg-4Z-4lm"/>
                     </tabViewItems>
+                    <viewControllerTransitionOptions key="transitionOptions" allowUserInteraction="YES"/>
                     <tabView key="tabView" type="noTabsNoBorder" id="i7z-hX-jVK">
                         <rect key="frame" x="0.0" y="0.0" width="300" height="400"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -619,9 +620,6 @@
             <point key="canvasLocation" x="833" y="653"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="MenuBar" width="1175" height="1039"/>
-    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="bZy-wy-uq6"/>
     </inferredMetricsTieBreakers>

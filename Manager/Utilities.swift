@@ -34,13 +34,9 @@ public func shell(command: String, output: Bool) -> (process: Process, output: S
 }
 
 public func config() {
-    try? FileManager.default.createDirectory(at: homeFolderURL.appendingPathComponent(".config/gladius/wallet"), withIntermediateDirectories: true, attributes: nil)
-    try? FileManager.default.createDirectory(at: homeFolderURL.appendingPathComponent(".config/gladius/keys"), withIntermediateDirectories: true, attributes: nil)
-    try? FileManager.default.copyItem(at: URL(fileURLWithPath: Bundle.main.resourcePath! + "/gladius-guardian.toml"), to: homeFolderURL.appendingPathComponent(".config/gladius/gladius-guardian.toml"))
-}
-
-public func content() {
-    try? FileManager.default.copyItem(at: URL(fileURLWithPath: Bundle.main.resourcePath! + "/content"), to: homeFolderURL.appendingPathComponent(".config/gladius/content"))
+    try? FileManager.default.createDirectory(at: homeFolderURL.appendingPathComponent(".gladius/wallet"), withIntermediateDirectories: true, attributes: nil)
+    try? FileManager.default.createDirectory(at: homeFolderURL.appendingPathComponent(".gladius/content"), withIntermediateDirectories: true, attributes: nil)
+    try? FileManager.default.copyItem(at: URL(fileURLWithPath: Bundle.main.resourcePath! + "/gladius-guardian.toml"), to: homeFolderURL.appendingPathComponent(".gladius/gladius-guardian.toml"))
 }
 
 func update() {
@@ -110,8 +106,8 @@ public func addToPath() {
         }
         
         if !shellPreferences.contains("gladius/paths") {
-            let _ = shell(command: "echo \"export PATH=\\$PATH:/Applications/Gladius.app/Contents/Resources\"  > ~/.config/gladius/paths", output: false)
-            let _ = shell(command: "echo \"source ~/.config/gladius/paths\"  >> ~/\(rcFile)", output: false)
+            let _ = shell(command: "echo \"export PATH=\\$PATH:/Applications/Gladius.app/Contents/Resources\"  > ~/.gladius/paths", output: false)
+            let _ = shell(command: "echo \"source ~/.gladius/paths\"  >> ~/\(rcFile)", output: false)
         }
     }
 }

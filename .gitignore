@@ -3,6 +3,7 @@ Manager/Electron/*
 !Manager/Electron/README.md
 
 Manager/Shared/*
+!Manager/Shared/gladius-guardian.toml
 !Manager/Shared/README.md
 
 # Xcode

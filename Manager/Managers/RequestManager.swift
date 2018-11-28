@@ -11,6 +11,7 @@ import Foundation
 class RequestManager {
     let sessionConfig = URLSessionConfiguration.default
 //    let operationQueue = OperationQueue.init()
+    var retry = true
     
     func sendGuardianTimeoutRequest() {
         /* Create session, and optionally set a URLSessionDelegate. */
@@ -42,6 +43,9 @@ class RequestManager {
             else {
                 // Failure
                 print("URL Session Task Failed: %@", error!.localizedDescription);
+                if (error != nil) {
+                    self.sendGuardianTimeoutRequest()
+                }
             }
         })
         task.resume()

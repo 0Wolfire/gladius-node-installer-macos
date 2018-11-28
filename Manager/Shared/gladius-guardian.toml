@@ -1,0 +1,2 @@
+NetworkdExecutable = "/Applications/Gladius.app/Contents/Resources/gladius-edged"
+ControldExecutable = "/Applications/Gladius.app/Contents/Resources/gladius-network-gateway"

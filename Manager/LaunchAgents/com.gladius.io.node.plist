@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Label</key>
-	<string>com.gladius.io.node-manager</string>
+	<string>com.gladius.io.node</string>
 	<key>RunAtLoad</key>
 	<true/>
 	<key>ProgramArguments</key>

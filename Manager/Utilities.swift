@@ -53,7 +53,7 @@ public func launchAgent() {
             print(error)
         }
     } else {
-        try? FileManager.default.removeItem(at: homeFolderURL.appendingPathComponent("Library/LaunchAgents/com.gladius.io.node-manager.plist"))
+        try? FileManager.default.removeItem(at: homeFolderURL.appendingPathComponent("Library/LaunchAgents/com.gladius.io.node.plist"))
     }
 }
 
